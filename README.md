@@ -10,30 +10,40 @@ For general information about developing packages, see the Dart guide for
 and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/to/develop-packages).
 -->
-
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+A Flutter package that allows you to stream live camera feeds from compatible devices, with easy-to-use controls for starting, stopping, and refreshing the feed. Designed to be intuitive, flexible, and suitable for a wide variety of applications, including remote monitoring, security, and creative photo/video apps
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+1.TO Start live view feed with customizable size and display options.
+2.Stream live camera data directly into your Flutter apps.
+3.Stop and refresh the live view seamlessly.
+4.A widget to render live view feed in real-time.
+5.Optimized for low latency with configurable frame rate limits.
 
 ## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+Installation
+
+Add the package to your pubspec.yaml:
+
+dependencies:
+  camera_live_view: latest
+
+Run the following command:
+flutter pub get
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+ final CameraController controller = CameraController();
+ 
+ LiveViewWidget(controller: controller)
 
-```dart
-const like = 'sample';
-```
+ controller.startLiveView(
+           liveViewSize: "medium", // Configurable parameter
+          cameraDisplay: "on",    // Configurable parameter
+                );
 
 ## Additional information
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+📝 Documentation
+For more detailed usage instructions and API reference, visit the https://github.com/gautamshaileshk/camera_live_view
